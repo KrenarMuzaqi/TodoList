@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Nunito Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  background: linear-gradient(53deg, #008bbe 50%, #009ebd 0);
+  width: 100%;
   min-height: 100vh;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
 }
 
-.App-link {
-  color: #61dafb;
+.container .app-wrapper {
+  background-color: #fff;
+  min-width: 45rem;
+  min-height: 60rem;
+  height: auto;
+  padding: 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  margin: 6rem 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.container .app-wrapper .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+.container .app-wrapper .main .header h1 {
+  color: #202124;
+  text-align: center;
+  margin: 5rem 2rem;
+  font-size: 3.6rem;
+}
+
+.container .app-wrapper .main .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.container .app-wrapper .main .list {
+  width: 90%;
+  margin: auto;
+  max-height: 300px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.container .app-wrapper .main ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container .app-wrapper .main ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #aaa;
+}
+
+.container .app-wrapper .main ::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+.container .app-wrapper .main .item-input {
+  width: 90%;
+  padding: 1.5rem 1rem 1rem 2rem;
+  font-size: 1.6rem;
+  color: #202124;
+  background-color: #fff;
+  border: 1px solid #444;
+  outline: none;
+  border-radius: 0.4rem;
+}
+
+.container .app-wrapper .main .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.container .app-wrapper .main .btn {
+  margin: 1rem;
+  padding: 1rem 1.2rem;
+}
+
+.container .app-wrapper .main .btn:hover {
+  opacity: 0.8;
+}
+
+.container .app-wrapper .main .add-item-btn {
+  background-color: #008bbe;
+  color: #fff;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+}
+
+.container .app-wrapper .main .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2rem 0;
+  padding-bottom: 0.5rem;
+}
+
+.container .app-wrapper .main .list-item span {
+  color: #202124;
+}
+
+.container .app-wrapper .main .item-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.container .app-wrapper .main .btn-delete i {
+  font-size: 16px;
+  color: #202124;
+  margin-right: 20px;
+  opacity: 0.5;
+}
+
+.container .app-wrapper .main .btn-delete i:hover,
+.container .app-wrapper .main .btn-edit i:hover {
+  opacity: 1;
+}
+
+.container .app-wrapper .main .btn-edit i {
+  font-size: 16px;
+  color: #202124;
+  margin-right: 20px;
+  opacity: 0.5;
+}
+
+.container .app-wrapper .main .clear-btn {
+  background-color: #008bbe;
+  color: #fff;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+}
+
+.container .app-wrapper .main .no-items {
+  color: #777;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .container .app-wrapper {
+    min-width: 90%;
   }
 }
+/*# sourceMappingURL=App.css.map */
